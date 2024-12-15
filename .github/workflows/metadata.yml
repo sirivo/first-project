@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: metadata-output
-        run: echo "GitHut Metadata  {{ toJSON(github) }}"
+        run: echo "{{ toJSON(github) }}"
       
     
