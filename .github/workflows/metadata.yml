@@ -1,0 +1,10 @@
+name: workflow-metadata
+on: [push, workflow_dispatch]
+jobs:
+  workflow-metadata-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: metadata-output
+        run: echo "GitHut Metadata output ... \n {{ toJSON(github) }}"
+      
+      
