@@ -7,4 +7,4 @@ jobs:
       - name: metadata-output
         run: echo "gitlab metadata output - ${{ toJSON(github) }}"
       - name: welcome msg
-        run: echo "Hello world .."      
+        run: echo "Hello world ...."      
