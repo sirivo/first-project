@@ -30,7 +30,7 @@ jobs:
         java -jar junit-platform-console-standalone-1.8.2.jar -cp . --select-class HelloWorldTest
     
     - name: Upload Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: HelloWorld
         path: |
