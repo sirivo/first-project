@@ -22,4 +22,17 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: JavaArtifacts
-        path: Test.class
+        path: HelloWorld.class
+
+    - name: Run Tests
+      run: |
+        wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.8.2/junit-platform-console-standalone-1.8.2.jar
+        java -jar junit-platform-console-standalone-1.8.2.jar -cp . --select-class HelloWorldTest
+    
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: HelloWorld
+        path: |
+          HelloWorld.class
+          HelloWorldTest.class 
