@@ -42,8 +42,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Build Steps completed successfully!
-      - name: java build
-        run: javac Test.java
       # Archive artifacts 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
