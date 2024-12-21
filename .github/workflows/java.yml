@@ -25,14 +25,16 @@ jobs:
         path: HelloWorld.class
 
     - name: Run Tests
+      id: run-test
       run: |
         wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.8.2/junit-platform-console-standalone-1.8.2.jar
         java -jar junit-platform-console-standalone-1.8.2.jar -cp . --select-class HelloWorldTest
     
     - name: Upload Artifact
+      if: failure() && steps.run-test.outcome == "failure"
       uses: actions/upload-artifact@v4
       with:
         name: HelloWorld
         path: |
           HelloWorld.class
-          HelloWorldTest.class 
+          // HelloWorldTest.class 
