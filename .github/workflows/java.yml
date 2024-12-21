@@ -15,8 +15,8 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     
-    - name: Compile Java
-      run: javac Test.java
+    - name: Compile Code
+      run: javac HelloWorld.java
     
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
