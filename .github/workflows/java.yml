@@ -16,7 +16,7 @@ jobs:
 
     - name: Check Branch Main
       if: github.ref == 'refs/heads/main'
-      run: echo "Current Branch is main
+      run: echo "Current Branch is main"
 
     - name: Display Branch Name other
       if: github.ref != 'refs/heads/main'
