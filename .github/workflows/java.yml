@@ -34,3 +34,15 @@ jobs:
         name: myapp-${{ github.sha }}.jar
         path: target/*.jar
         retention-days: 7
+
+  report:
+    needs: 
+      - build
+    if: success()
+    runs-on: ubuntu-latest
+    steps:
+      - name: job output info
+        run: |
+          echo "All jobs completed successfully"
+          echo "${{ toJSON(github) }}"
+          
