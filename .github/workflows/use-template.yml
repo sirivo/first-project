@@ -1,10 +1,12 @@
 name: Reusable workflow template call job
 on: [push, workflow_dispatch]
 jobs:
-  build:
+  my_first_job:
     runs-on: ubuntu-latest
     steps:
-      - name: build job
-        run: echo "Build app"
-      - name: deploy job 
-        uses: ./.github/actions/setup-composite/action.yml
+      # This step checks out a copy of your repository.
+      - name: My first step - check out repository
+        uses: actions/checkout@v4
+      # This step references the directory that contains the action.
+      - name: Use local hello-world-action
+        uses: ./.github/actions/hello-world-action
