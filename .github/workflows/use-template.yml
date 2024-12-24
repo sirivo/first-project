@@ -7,4 +7,4 @@ jobs:
       - name: build job
         run: echo "Build app"
       - name: deploy job 
-        uses: ./.github/workflows/template.yml
+        uses: ./.github/actions/setup-composite/action.yml
