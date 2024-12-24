@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: workflow-template-call
-        calls: ./.github/workflows/template.yml
+        uses: ./.github/workflows/template.yml
