@@ -1,0 +1,8 @@
+name: workflow-metadata
+on: [push, workflow_dispatch]
+jobs:
+  workflow-template-call-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: workflow-template-call
+        run: .github/workflows/template.yml
