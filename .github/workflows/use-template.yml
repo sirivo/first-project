@@ -1,9 +1,10 @@
 name: Reusable workflow template call job
 on: [push, workflow_dispatch]
 jobs:
-  workflow-template-call-job:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: workflow-template-call
+      - name: build job
+        run: echo "Build app"
+      - name: deploy job 
         uses: ./.github/workflows/template.yml
