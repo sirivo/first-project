@@ -10,9 +10,4 @@ jobs:
     
     - name: Print statement
       run: Hello from templates ...
-    
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: WebFiles
-        path: web.html
+
