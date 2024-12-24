@@ -1,4 +1,4 @@
-name: Reusable-workflow-template-call-job
+name: Reusable workflow template call job
 on: [push, workflow_dispatch]
 jobs:
   workflow-template-call-job:
