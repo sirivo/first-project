@@ -8,5 +8,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Print statement
+    - name: my template job output 
       run: echo "Hello from templates ..."
