@@ -1,5 +1,5 @@
 name: workflow-metadata
-on: [push, workflow_dispatch]
+on: [push, workflow_dispatch, workflow_call]
 jobs:
   workflow-metadata-job:
     runs-on: ubuntu-latest
